@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
 
-export default class Test extends Component {
+export default class Header extends Component {
   render() {
-    return this.props.nom.map((pres) => 
-      <h1 key={pres.id}> {pres.nom} {pres.prenom} {pres.age} ans</h1>
+    return (
+      <div>
+          <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
+            <div className="container">
+                <a href="/" className="navbar-brand">Liste de contacts</a>
+            </div>
+            <ul className='navbar-nav mr-auto'>
+                <li className='nav-item'>
+                    <a href='/' className='nav-link'>
+                        Acceuil
+                    </a>
+                </li>     
+            </ul>
+          </nav>
+      </div>
     )
   }
 }
-
-
